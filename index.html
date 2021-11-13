@@ -42,10 +42,17 @@
   	font-size: 36px;
   	margin-left: 50px;
 }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 1%;
+  width: 100%;
+  text-align: center;
+}
 </style>
 <script>
 function openNav() {
-
   	document.getElementById("mySidenav").style.width = "200px";
 }
 
@@ -55,20 +62,27 @@ function closeNav() {
 </script>
 </head>
 <body style="background-color: #009900; text-align: center; font-family: 'Acme', sans-serif;">
-	<div style="font-size: 20px; cursor:pointer; margin-top: 15px; margin-left: 15px; color: black; position: absolute;" onclick="openNav()">&#9776; Menu</div>
+	<div style="font-size: 20px; cursor:pointer; margin-top: 15px; margin-left: 15px; color: black; position: absolute;" onclick="openNav()">&#9776;</div>
 	<div id="mySidenav" class="sidenav">
   		<Span class="closebtn" onclick="closeNav()">&times;</span>
 		<span onclick=''>Home</span>
 		<span onClick=''>Parts</span>
 		<span onClick=''>Events</span>
-		<span onClick=''>Contact</span>
 	</div>	
 	<div id="main">
-		<img src="logo.png" width="25%">
-		<div>Authorized <a href="https://www.sherco.com/en/" target="_blank"><img src="sherco-logo.png" width="13%;"></a> Dealer</div>
+		<img src="logo.png" width="400px">
 		<div id="home" style="margin-top: 15%;">
 			Under construction	
 		</div>
+	<div class="footer">
+		<div id=contact" style="padding: 10px;">
+			<a href="tel:+1-989-450-9676"><img src="5a45255e546ddca7e1fcbc7c.png" width="50px"></img></a>
+			<a href="mailto:evergreencyclewerx@yahoo.com"><img src="email_icon_transparent512.png" width="45px" style="margin-left: 10px;"></img></a>
+			<a href="https://www.facebook.com/EvergreenCyclewerx/"><img src="1200px-Facebook_icon.svg.png" width="47px" style="margin-left: 10px;"></img></a>
+		</div>
+		<div>3171 Waterman Rd, Vassar MI, 48768</div>
+		<div>Authorized <a href="https://www.sherco.com/en/" target="_blank"><img src="sherco-logo.png" width="125px;"></a> Dealer</div>
 	</div>
+	</div>		
 </body>
 </html>
