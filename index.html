@@ -50,6 +50,15 @@
   width: 100%;
   text-align: center;
 }
+
+.menubtn {
+	font-size: 20px; 
+	cursor:pointer; 
+	margin-top: 10px; 
+	margin-left: 10px; 
+	color: black; 
+	text-align: left;
+}
 </style>
 <script>
 function openNav() {
@@ -62,27 +71,26 @@ function closeNav() {
 </script>
 </head>
 <body style="background-color: #009900; text-align: center; font-family: 'Acme', sans-serif;">
-	<div style="font-size: 20px; cursor:pointer; margin-left: 15px; color: black; position: absolute;" onclick="openNav()">&#9776;</div>
+	<div class="menubtn" onclick="openNav()">&#9776;</div>	
 	<div id="mySidenav" class="sidenav">
   		<Span class="closebtn" onclick="closeNav()">&times;</span>
 		<span onclick=''>Home</span>
 		<span onClick=''>Parts</span>
 		<span onClick=''>Events</span>
 	</div>	
-	<div id="main" style="margin-top: 25px;">
-		<img src="logo.png" width="400px">
-		<div id="home" style="margin-top: 15%;">
-			Under construction	
+	<div id="main">		
+		<div id="home">
+			<img src="logo.png" width="400px">
 		</div>
-	<div class="footer">
-		<div id=contact" style="padding: 10px;">
-			<a href="tel:+1-989-450-9676"><img src="5a45255e546ddca7e1fcbc7c.png" width="50px"></img></a>
-			<a href="mailto:evergreencyclewerx@yahoo.com"><img src="email_icon_transparent512.png" width="45px" style="margin-left: 10px;"></img></a>
-			<a href="https://www.facebook.com/EvergreenCyclewerx/"><img src="1200px-Facebook_icon.svg.png" width="47px" style="margin-left: 10px;"></img></a>
+		<div class="footer">
+			<div id=contact" style="padding: 10px;">
+				<a href="tel:+1-989-450-9676"><img src="5a45255e546ddca7e1fcbc7c.png" width="47px"></img></a>
+				<a href="mailto:evergreencyclewerx@yahoo.com"><img src="email_icon_transparent512.png" width="47px" style="margin-left: 10px;"></img></a>
+				<a href="https://www.facebook.com/EvergreenCyclewerx/" target="_blank"><img src="1200px-Facebook_icon.svg.png" width="47px" style="margin-left: 10px;"></img></a>
+			</div>
+			<div>3171 Waterman Rd, Vassar MI, 48768</div>
+			<div>Authorized <a href="https://www.sherco.com/en/" target="_blank"><img src="sherco-logo.png" width="125px;"></a> Dealer</div>
 		</div>
-		<div>3171 Waterman Rd, Vassar MI, 48768</div>
-		<div>Authorized <a href="https://www.sherco.com/en/" target="_blank"><img src="sherco-logo.png" width="125px;"></a> Dealer</div>
-	</div>
 	</div>		
 </body>
 </html>
