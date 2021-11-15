@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<head>
 	<title>EverGreenCycleWerx</title>
     	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
 	<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
@@ -51,13 +50,27 @@
   text-align: center;
 }
 
+.main {
+  	transition: margin-left .5s;
+  	padding: 10px;
+	text-align: center;
+	height: 100vh;
+}
+
 .menubtn {
+	position: absolute;
 	font-size: 20px; 
 	cursor:pointer; 
 	margin-top: 10px; 
 	margin-left: 10px; 
 	color: black; 
 	text-align: left;
+}
+
+#bikes, #shop, #about, #parts {
+	display: none;
+	font-family: 'Acme', sans-serif;
+	font-size: 1.1em;
 }
 </style>
 <script>
@@ -66,7 +79,24 @@ function openNav() {
 }
 
 function closeNav() {
-  	document.getElementById("mySidenav").style.width = "0";
+  	document.getElementById("mySidenav").style.width = "0px";
+}
+
+function show(div){
+	let divs = document.getElementsByClassName("main");
+	for (i = 0; i <= divs.length; i++){
+		if (divs[i].id === div){
+			document.getElementById("" + divs[i].id + "").style.display = "block"
+		}
+		else {
+			document.getElementById("" + divs[i].id + "").style.display = "none";
+		}
+	closeNav();
+	}	
+}
+
+function ckMenu() {
+	if (document.getElementById("mySidenav").style.width = "200px"){closeNav();}
 }
 </script>
 </head>
@@ -74,23 +104,57 @@ function closeNav() {
 	<div class="menubtn" onclick="openNav()">&#9776;</div>	
 	<div id="mySidenav" class="sidenav">
   		<Span class="closebtn" onclick="closeNav()">&times;</span>
-		<span onclick=''>Home</span>
-		<span onClick=''>Parts</span>
-		<span onClick=''>Events</span>
+		<span onclick='show("home")'>Home</span>
+		<span onClick='show("bikes")'>Bikes</span>
+		<span onClick='show("parts")'>Parts</span>
+		<span onClick='show("shop")'>Shop</span>
+		<span onClick='show("about")'>about</span>
 	</div>	
-	<div id="main">		
-		<div id="home">
+	<div id="home" class="main">		
+		<div>
 			<img src="logo.png" width="350px">
+		</div>
+		<div>
+			<img src="home.jpg" width="35%" style="border-radius: 15px;">
 		</div>
 		<div class="footer">
 			<div id=contact" style="padding: 10px;">
 				<a href="mailto:evergreencyclewerx@yahoo.com"><img src="email_icon_transparent512.png" width="47px"></img></a>
-				<a href="tel:+1-989-450-9676"><img src="5a45255e546ddca7e1fcbc7c.png" width="47px" style="margin-left: 10px;></img></a>
+				<a href="tel:+1-989-450-9676"><img src="phone.png" width="47px" style="margin-left: 10px;></img></a>
 				<a href="https://www.facebook.com/EvergreenCyclewerx/" target="_blank"><img src="1200px-Facebook_icon.svg.png" width="47px" style="margin-left: 10px;"></img></a>
 			</div>
 			<div>3171 Waterman Rd, Vassar MI, 48768</div>
 			<div>Authorized <a href="https://www.sherco.com/en/" target="_blank"><img src="sherco-logo.png" width="125px;"></a> Dealer</div>
 		</div>
-	</div>		
+	</div>	
+	<div id="bikes" class="main">
+		<div>
+			<img src="logo.png" width="350px">
+		</div>	
+		<div>
+			<img src="96260748_1515039838668798_462456085291204608_n.jpg" width="75%" style="border-radius: 15px;">
+		</div>
+	</div>	
+	<div id="parts" class="main">
+		<div>
+			<img src="logo.png" width="350px">
+		</div>
+		<div>
+			<img src="parts.jpg" width="75%" style="border-radius: 15px;">
+		</div>	
+	</div>
+	<div id="shop" class="main">
+		<div>
+			<img src="logo.png" width="350px">
+		</div>	
+		<div>
+			<img src="shop.jpg" width="50%" style="border-radius: 15px;">
+		</div>
+	</div>
+	<div id="about" class="main">	
+		<div>
+			<img src="logo.png" width="350px">
+		</div>
+	</div>			
 </body>
 </html>
